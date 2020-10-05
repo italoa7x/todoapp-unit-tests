@@ -48,7 +48,7 @@ public class TarefaTestes {
 		tarefaComTodosOsDados.setTitulo("titulo atualizado da tarefa correta");
 		tarefaComTodosOsDados.setDescricao("descricação atualizada da atividade correta");
 		tarefaComTodosOsDados.setId(4);
-		tarefaService.atualizarTarefa(tarefaComTodosOsDados);
+		assertTrue(tarefaService.atualizarTarefa(tarefaComTodosOsDados) != null);
 	}
 
 	@Test
