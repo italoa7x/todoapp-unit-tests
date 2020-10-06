@@ -1,10 +1,9 @@
 package br.ifpb.edu.testes;
 
 import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertThrows;
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
-import java.util.Arrays;
 import java.util.Date;
 
 import org.junit.Before;
@@ -69,6 +68,11 @@ public class UsuarioTestes {
 		// tenta logar
 		Usuario logado = usuarioService.logar(usuarioCorreto.getEmail(), usuarioCorreto.getSenha());
 		assertTrue(logado != null);
+	}
+	
+	@Test
+	public void testaLogarComUsuarioInvalido() {
+		assertNull(usuarioService.logar(usuarioSemEmail.getEmail(), usuarioSemEmail.getSenha()));
 	}
 
 	@Test

@@ -8,6 +8,6 @@ import org.junit.runners.Suite.SuiteClasses;
 @SuiteClasses(value = {
 		UsuarioTestes.class,
 		TarefaTestes.class})
-public class SwitchTestes {
+public class SuiteTestes {
 
 }
